@@ -3,6 +3,9 @@ import { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { signupUser } from '../slice/signupSlice';
 
+//custom hooks 
+// import { useLogout } from '../hooks/useLogout';
+
 //library css
 import '../../../assets/fonts/feather/feather.css';
 import '../../../assets/libs/bootstrap-icons/font/bootstrap-icons.css';
@@ -29,32 +32,6 @@ const Signup = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        //Handle for submission logic
-        // const formData = {
-        //     first_name:firstName,
-        //     last_name:lastName,
-        //     phone_number:phoneNumber,
-        //     email,
-        //     password,
-        //     acceptTerms,
-        // };
-        // console.log(formData);
-
-        //   fire signup hook here 
-        // fetch('http://localhost:4000/api/user/signup', {
-        //     method: 'POST',
-        //     headers:{
-        //         'Content-Type' : 'application/json'
-        //     },
-        //     body: JSON.stringify(formData),
-        // })
-        // .then(response => response.json())
-        // .then((data) => {
-        //     console.log(data)
-        // })
-        // .catch(Error => {
-        //     console.log(Error)
-        // })
         dispatch(signupUser({email,password}));
         
 
@@ -66,6 +43,11 @@ const Signup = () => {
         setAcceptTerms(false)
     }
 
+    //handle logout
+    // const { logout } = useLogout();
+    // const handleLogout = () => {    
+    //     logout();
+    // }
 
     return (
         <main>
@@ -79,7 +61,7 @@ const Signup = () => {
                                 <div className="mb-4 text-center">
                                     <a href="../index.html"><img src={logo} className="mb-4" alt="logo" /></a>
                                     <h1 className="mb-1 fw-bold">Sign up</h1>
-                                    <span>Already have an account? <a href="sign-in.html" className="ms-1">Sign in</a></span>
+                                    <span>Already have an account? <a href="sign-in.html" className="ms-1"  >Sign in</a></span>
                                 </div>
                                 {/* Form */}
                                 <form onSubmit={handleSubmit} className='row' >

@@ -34,6 +34,13 @@ export const signupUser = createAsyncThunk('signup/signupUser', async ({ email, 
 const signupSlice = createSlice({
     name: 'signup',
     initialState ,
+    reducers: {
+        // add reducers here
+        logout: (state) => {
+            localStorage.removeItem('user')
+            state.user = null
+        }
+    },
     extraReducers:(builder) => {
         builder.addCase(signupUser.pending,(state,action) => {
             state.loading = true
