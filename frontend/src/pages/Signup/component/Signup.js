@@ -171,25 +171,7 @@ const Signup = () => {
                                             </button>
                                         </div>
                                     </div>
-                                    <hr className="my-4" />
-                                    <div className="mt-4 text-center">
-                                        {/* Facebook */}
-                                        <a href="#" className="btn-social btn-social-outline btn-facebook">
-                                            <i className="mdi mdi-facebook fs-4"></i>
-                                        </a>
-                                        {/* Twitter */}
-                                        <a href="#" className="btn-social btn-social-outline btn-twitter">
-                                            <i className="mdi mdi-twitter fs-4"></i>
-                                        </a>
-                                        {/* LinkedIn */}
-                                        <a href="#" className="btn-social btn-social-outline btn-linkedin">
-                                            <i className="mdi mdi-linkedin"></i>
-                                        </a>
-                                        {/* GitHub */}
-                                        <a href="#" className="btn-social btn-social-outline btn-github">
-                                            <i className="mdi mdi-github"></i>
-                                        </a>
-                                    </div>
+                                    
                                 </form>
                             </div>
                         </div>
