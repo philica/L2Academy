@@ -7,7 +7,7 @@ const userAuth = require('../Middleware/userAuth')
 const {loginUser,signupUser} = require('../Controllers/user.controller')
 
 const router = express.Router()
-router.use(userAuth)
+// router.use(userAuth)
 
 //Login route
 router.post('/login',loginUser)
@@ -15,6 +15,7 @@ router.post('/login',loginUser)
 //Signup route
 router.post('/signup',signupUser)
 
+//Logout route
 
 
 module.exports = router
