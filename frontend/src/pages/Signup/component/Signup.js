@@ -1,5 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
+import { useDispatch } from 'react-redux';
+import { signupUser } from '../slice/signupSlice';
 
 //library css
 import '../../../assets/fonts/feather/feather.css';
@@ -23,35 +25,39 @@ const Signup = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [acceptTerms, setAcceptTerms] = useState(false);
+    const dispatch = useDispatch();
 
     const handleSubmit = (e) => {
         e.preventDefault();
         //Handle for submission logic
-        const formData = {
-            first_name:firstName,
-            last_name:lastName,
-            phone_number:phoneNumber,
-            email,
-            password,
-            acceptTerms,
-        };
-        console.log(formData);
+        // const formData = {
+        //     first_name:firstName,
+        //     last_name:lastName,
+        //     phone_number:phoneNumber,
+        //     email,
+        //     password,
+        //     acceptTerms,
+        // };
+        // console.log(formData);
 
         //   fire signup hook here 
-        fetch('http://localhost:4000/api/user/signup', {
-            method: 'POST',
-            headers:{
-                'Content-Type' : 'application/json'
-            },
-            body: JSON.stringify(formData),
-        })
-        .then(response => response.json())
-        .then((data) => {
-            console.log(data)
-        })
-        .catch(Error => {
-            console.log(Error)
-        })
+        // fetch('http://localhost:4000/api/user/signup', {
+        //     method: 'POST',
+        //     headers:{
+        //         'Content-Type' : 'application/json'
+        //     },
+        //     body: JSON.stringify(formData),
+        // })
+        // .then(response => response.json())
+        // .then((data) => {
+        //     console.log(data)
+        // })
+        // .catch(Error => {
+        //     console.log(Error)
+        // })
+        dispatch(signupUser({email,password}));
+        
+
 
         setFirstName('')
         setLastName('')
