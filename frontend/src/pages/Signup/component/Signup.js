@@ -4,16 +4,8 @@ import { useDispatch } from 'react-redux';
 import { signupUser } from '../slice/signupSlice';
 
 //custom hooks 
-// import { useLogout } from '../hooks/useLogout';
+import { useLogout } from '../hooks/useLogout';
 
-//library css
-import '../../../assets/fonts/feather/feather.css';
-import '../../../assets/libs/bootstrap-icons/font/bootstrap-icons.css';
-import '../../../assets/libs/@mdi/font/css/materialdesignicons.min.css';
-import '../../../assets/libs/simplebar/dist/simplebar.min.css';
-
-//theme css
-import '../../../assets/css/theme.min.css'
 
 //images
 import logo from '../../../assets/images/brand/logo/L2Logo.png'
@@ -43,11 +35,11 @@ const Signup = () => {
         setAcceptTerms(false)
     }
 
-    //handle logout
-    // const { logout } = useLogout();
-    // const handleLogout = () => {    
-    //     logout();
-    // }
+    // handle logout
+    const { logoutFunction } = useLogout();
+    const handleLogout = () => {    
+        logoutFunction();
+    }
 
     return (
         <main>
@@ -61,7 +53,7 @@ const Signup = () => {
                                 <div className="mb-4 text-center">
                                     <a href="../index.html"><img src={logo} className="mb-4" alt="logo" /></a>
                                     <h1 className="mb-1 fw-bold">Sign up</h1>
-                                    <span>Already have an account? <a href="sign-in.html" className="ms-1"  >Sign in</a></span>
+                                    <span>Already have an account? <a href="sign-in.html" className="ms-1" onClick={handleLogout}  >Sign in</a></span>
                                 </div>
                                 {/* Form */}
                                 <form onSubmit={handleSubmit} className='row' >
