@@ -1,4 +1,6 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
+
 
 import logo from '../assets/images/brand/logo/L2HomeLogo.png'
 import playstore from '../assets/images/svg/playstore.svg'
@@ -21,9 +23,9 @@ const Footer = () => {
               </p>
               {/* social media */}
               <div className="fs-4 mt-4">
-                <a href="#" className="mdi mdi-facebook fs-4 text-muted me-2"></a>
-                <a href="#" className="mdi mdi-twitter text-muted me-2"></a>
-                <a href="#" className="mdi mdi-instagram text-muted "></a>
+                <Link to="#" className="mdi mdi-facebook fs-4 text-muted me-2"></Link>
+                <Link to="#" className="mdi mdi-twitter text-muted me-2"></Link>
+                <Link to="#" className="mdi mdi-instagram text-muted "></Link>
               </div>
             </div>
           </div>
@@ -34,29 +36,29 @@ const Footer = () => {
             <h3 className="fw-bold mb-3">Company</h3>
             <ul className="list-unstyled nav nav-footer flex-column nav-x-0">
               <li>
-                <a href="#" className="nav-link">
+                <Link to="#" className="nav-link">
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="nav-link">
+                <Link to="#" className="nav-link">
                   Pricing
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="nav-link">
+                <Link to="#" className="nav-link">
                   Blog
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="nav-link">
+                <Link to="#" className="nav-link">
                   Careers
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="nav-link">
+                <Link to="#" className="nav-link">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -67,29 +69,29 @@ const Footer = () => {
             <h3 className="fw-bold mb-3">Support</h3>
             <ul className="list-unstyled nav nav-footer flex-column nav-x-0">
               <li>
-                <a href="#" className="nav-link">
+                <Link to="#" className="nav-link">
                   Help and Support
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="nav-link">
+                <Link to="#" className="nav-link">
                   Become Instructor
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="nav-link">
+                <Link to="#" className="nav-link">
                   Get the app
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="nav-link">
+                <Link to="#" className="nav-link">
                   FAQ’s
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="nav-link">
+                <Link to="#" className="nav-link">
                   Tutorial
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -100,18 +102,18 @@ const Footer = () => {
             <h3 className="fw-bold mb-3">Get in touch</h3>
             <p>339 McDermott Points Hettingerhaven, NV 15283</p>
             <p className="mb-1">
-              Email: <a href="#">support@geeksui.com</a>
+              Email: <Link to="#">support@geeksui.com</Link>
             </p>
             <p>
               Phone: <span className="text-dark fw-semibold">(000) 123 456 789</span>
             </p>
             <div className="d-flex">
-              <a href="#">
+              <Link to="#">
                 <img src={appstore} alt="" className="img-fluid" />
-              </a>
-              <a href="#" className="ms-2">
+              </Link>
+              <Link to="#" className="ms-2">
                 <img src={playstore} alt="" className="img-fluid" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -134,18 +136,18 @@ const Footer = () => {
             </div>
             <div>
               <nav className="nav nav-footer">
-                <a className="nav-link ps-0" href="#">
+                <Link className="nav-link ps-0" to="#">
                   Privacy Policy
-                </a>
-                <a className="nav-link" href="#">
+                </Link>
+                <Link className="nav-link" to="#">
                   Terms of Service
-                </a>
-                <a className="nav-link" href="#">
+                </Link>
+                <Link className="nav-link" to="#">
                   Licenses
-                </a>
-                <a className="nav-link" href="#">
+                </Link>
+                <Link className="nav-link" to="#">
                   Sitemap
-                </a>
+                </Link>
               </nav>
             </div>
           </div>
@@ -153,9 +155,9 @@ const Footer = () => {
         <div className="col-md-2 col-12">
           {/* scroll top */}
           <div className="text-end">
-            <a href="#" className="btn btn-icon btn-pills btn-primary">
+            <Link to="#" className="btn btn-icon btn-pills btn-primary">
               <i className="uil uil-arrow-up"></i>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

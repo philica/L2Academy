@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 
 
@@ -25,23 +26,23 @@ const PopularCourse = () => {
                         <ul class="nav nav-lb-tab mb-6 bg-gray-200 px-5 rounded-3 " id="pills-tab" role="tablist">
                             {/*<!-- nav item -->*/}
                             <li class="nav-item ms-0" role="presentation">
-                                <a class="nav-link active" id="pills-development-tab" data-bs-toggle="pill" href="#pills-development" role="tab" aria-controls="pills-development" aria-selected="true">Development </a>
+                                <Link class="nav-link active" id="pills-development-tab" data-bs-toggle="pill" to="#pills-development" role="tab" aria-controls="pills-development" aria-selected="true">Development </Link>
                             </li>
                             {/*<!-- nav item -->*/}
                             <li class="nav-item" role="presentation">
-                                <a class="nav-link" id="pills-design-tab" data-bs-toggle="pill" href="#pills-design" role="tab" aria-controls="pills-design" aria-selected="false" tabindex="-1">Design</a>
+                                <Link class="nav-link" id="pills-design-tab" data-bs-toggle="pill" to="#pills-design" role="tab" aria-controls="pills-design" aria-selected="false" tabindex="-1">Design</Link>
                             </li>
                             {/*<!-- nav item -->*/}
                             <li class="nav-item" role="presentation">
-                                <a class="nav-link" id="pills-marketing-tab" data-bs-toggle="pill" href="#pills-marketing" role="tab" aria-controls="pills-marketing" aria-selected="false" tabindex="-1">Marketing</a>
+                                <Link class="nav-link" id="pills-marketing-tab" data-bs-toggle="pill" to="#pills-marketing" role="tab" aria-controls="pills-marketing" aria-selected="false" tabindex="-1">Marketing</Link>
                             </li>
                             {/*<!-- nav item -->*/}
                             <li class="nav-item" role="presentation">
-                                <a class="nav-link" id="pills-business-tab" data-bs-toggle="pill" href="#pills-business" role="tab" aria-controls="pills-business" aria-selected="false" tabindex="-1">Business</a>
+                                <Link class="nav-link" id="pills-business-tab" data-bs-toggle="pill" to="#pills-business" role="tab" aria-controls="pills-business" aria-selected="false" tabindex="-1">Business</Link>
                             </li>
                             {/*<!-- nav item -->*/}
                             <li class="nav-item" role="presentation">
-                                <a class="nav-link" id="pills-health-tab" data-bs-toggle="pill" href="#pills-health" role="tab" aria-controls="pills-health" aria-selected="false" tabindex="-1">Health</a>
+                                <Link class="nav-link" id="pills-health-tab" data-bs-toggle="pill" to="#pills-health" role="tab" aria-controls="pills-health" aria-selected="false" tabindex="-1">Health</Link>
                             </li>
                         </ul>
                         {/* {<!-- Tab content -->} */}

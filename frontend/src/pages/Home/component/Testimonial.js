@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import Slider from './Slider'
 
 const Testimonial = () => {
@@ -33,7 +34,7 @@ const Testimonial = () => {
               </div>
               <div class="col-lg-6 col-md-4 text-md-end mt-4 mt-md-0">
                 {/* {<!-- btn -->} */}
-                <a href="#" class="btn btn-primary">View Reviews</a>
+                <Link to="#" class="btn btn-primary">View Reviews</Link>
               </div>
             </div>
 

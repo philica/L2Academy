@@ -1,4 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
+import { useNavigate } from 'react-router-dom'
+
+
 const initialState = {
   user: [],
   loading: false,

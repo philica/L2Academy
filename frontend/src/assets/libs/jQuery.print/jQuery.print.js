@@ -178,7 +178,7 @@
         }
         if (options.stylesheet) {
             // Add a custom stylesheet if given
-            $styles = $.merge($styles, $('<link rel="stylesheet" href="' + options.stylesheet + '">'));
+            $styles = $.merge($styles, $('<link rel="stylesheet" to="' + options.stylesheet + '">'));
         }
         // Create a copy of the element to print
         var copy = $this.clone();

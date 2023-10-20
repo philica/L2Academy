@@ -13,31 +13,31 @@ const MyTabs = () => {
     <div>
     <ul className="nav nav-pills">
       <li className="nav-item">
-        <a
+        <Link
           className={`nav-link ${activeTab === 'home' ? 'active' : ''}`}
           onClick={() => handleTabClick('home')}
-          href="#home"
+          to="#home"
         >
           Home
-        </a>
+        </Link>
       </li>
       <li className="nav-item">
-        <a
+        <Link
           className={`nav-link ${activeTab === 'profile' ? 'active' : ''}`}
           onClick={() => handleTabClick('profile')}
-          href="#profile"
+          to="#profile"
         >
           Profile
-        </a>
+        </Link>
       </li>
       <li className="nav-item">
-        <a
+        <Link
           className={`nav-link ${activeTab === 'messages' ? 'active' : ''}`}
           onClick={() => handleTabClick('messages')}
-          href="#messages"
+          to="#messages"
         >
           Messages
-        </a>
+        </Link>
       </li>
     </ul>
 

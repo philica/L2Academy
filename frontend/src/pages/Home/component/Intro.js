@@ -1,12 +1,14 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
+
 
 import image from '../../../assets/images/background/acedamy-img/bg-thumb.png'
 import girl from "../../../assets/images/background/acedamy-img/girl-image.png"
-import frame1 from "../../../assets/images/background/acedamy-img/frame-1.svg"
-import frame2 from "../../../assets/images/background/acedamy-img/frame-2.svg"
-import target from "../../../assets/images/background/acedamy-img/target.svg"
-import sound from "../../../assets/images/background/acedamy-img/sound.svg"
-import trophy from "../../../assets/images/background/acedamy-img/trophy.svg"
+import frame1 from "../../../assets/images/background/acedamy-img/frame-1.png"
+import frame2 from "../../../assets/images/background/acedamy-img/frame-2.png"
+import target from "../../../assets/images/background/acedamy-img/target.png"
+import sound from "../../../assets/images/background/acedamy-img/sound.png"
+import trophy from "../../../assets/images/background/acedamy-img/trophy.png"
 
 const Intro = () => {
   return (
@@ -26,8 +28,8 @@ const Intro = () => {
               <p className="pe-lg-10 mb-5">
                 Start, switch, or advance your career with more than 5,000 courses, Professional Certificates, and degrees from world-class universities and companies.
               </p>
-              <a href="#" className="btn btn-primary" style={{marginRight:"10px"}} >Join Free Now</a>
-              <a href="#" className="btn btn-yellow ">Are you instructure</a>
+              <Link to="#" className="btn btn-primary" style={{marginRight:"10px"}} >Join Free Now</Link>
+              <Link to="#" className="btn btn-yellow ">Are you instructure</Link>
               
             </div>
           </div>

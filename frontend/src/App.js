@@ -1,15 +1,16 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 
 // signup page
-import {Signup} from "./pages/Signup";
+import { Signup } from "./pages/Signup";
 // login page
-import {Login} from "./pages/Login"
+import { Login } from "./pages/Login"
 //home page
-import {Home} from "./pages/Home"
+import { Home } from "./pages/Home"
 
 
 //library css
@@ -24,9 +25,16 @@ import './assets/css/theme.min.css'
 
 function App() {
   return (
-    <>
-      <Home />
-    </>
+    <Router>
+      <Routes>
+
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/signup" element={<Signup />} />
+        <Route exact path="/login" element={<Login />} />
+        
+      </Routes>
+
+    </ Router>
   );
 }
 

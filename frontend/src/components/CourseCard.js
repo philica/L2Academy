@@ -1,4 +1,7 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
+
+
 import courseThumbnail from '../assets/images/course/Learn.png'
 
 const CourseCard = () => {
@@ -6,21 +9,21 @@ const CourseCard = () => {
     <div className="col">
       {/* Card */}
       <div className="card card-hover">
-        <a href="../course-single.html" className="card-img-top">
+        <Link to="../course-single.html" className="card-img-top">
           <img src={courseThumbnail} alt="course" className="rounded-top-md card-img-top" />
-        </a>
+        </Link>
         {/* Card Body */}
         <div className="card-body">
           <div className="d-flex justify-content-between align-items-center mb-3">
             <span className="badge bg-info-soft">Intermediate</span>
-            <a href="#" className="text-muted fs-5">
+            <Link to="#" className="text-muted fs-5">
               <i className="fe fe-heart align-middle"></i>
-            </a>
+            </Link>
           </div>
           <h4 className="mb-2 text-truncate-line-2">
-            <a href="../course-single.html" className="text-inherit">
+            <Link to="../course-single.html" className="text-inherit">
               How to easily create a website with JavaScript
-            </a>
+            </Link>
           </h4>
           <small>By: Claire Evans</small>
           <div className="lh-1 mt-3">
@@ -42,10 +45,10 @@ const CourseCard = () => {
               <h5 className="mb-0">$39.00</h5>
             </div>
             <div className="col-auto">
-              <a href="#" className="text-inherit">
+              <Link to="#" className="text-inherit">
                 <i className="fe fe-shopping-cart text-primary align-middle me-2"></i>
                 Get Enrolled
-              </a>
+              </Link>
             </div>
           </div>
         </div>

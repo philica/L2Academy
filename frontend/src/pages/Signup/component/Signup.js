@@ -1,6 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+
 import { useState } from 'react'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { signupUser } from '../slice/signupSlice';
 
 //custom hooks 
@@ -13,7 +16,8 @@ import logo from '../../../assets/images/brand/logo/L2Logo.png'
 
 
 const Signup = () => {
-
+    const signedUp = useSelector(state => state.signup);
+    const navigate = useNavigate();
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
@@ -22,12 +26,18 @@ const Signup = () => {
     const [acceptTerms, setAcceptTerms] = useState(false);
     const dispatch = useDispatch();
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        dispatch(signupUser({email,password}));
-        
-
-
+        try {
+            const resultAction = await dispatch(signupUser({ email, password }));
+            if (signupUser.fulfilled.match(resultAction)) {
+              navigate('/'); // Redirect to the home page
+            } else {
+              console.log('Failed to sign up');
+            }
+          } catch (error) {
+            console.log('Error signing up:', error.message);
+          }
         setFirstName('')
         setLastName('')
         setEmail('')
@@ -51,9 +61,9 @@ const Signup = () => {
                             {/* Card body */}
                             <div className="card-body p-6">
                                 <div className="mb-4 text-center">
-                                    <a href="../index.html"><img src={logo} className="mb-4" alt="logo" /></a>
+                                    <Link to="../index.html"><img src={logo} className="mb-4" alt="logo" /></Link>
                                     <h1 className="mb-1 fw-bold">Sign up</h1>
-                                    <span>Already have an account? <a href="sign-in.html" className="ms-1" onClick={handleLogout}  >Sign in</a></span>
+                                    <span>Already have an account? <Link to="/login" className="ms-1">Sign in</Link></span>
                                 </div>
                                 {/* Form */}
                                 <form onSubmit={handleSubmit} className='row' >
@@ -138,7 +148,7 @@ const Signup = () => {
 
                                             <label className="form-check-label" htmlFor="agreeCheck">
                                                 <span>
-                                                    I agree to the <a href="terms-condition-page.html">Terms of Service</a> and <a href="terms-condition-page.html">Privacy Policy.</a>
+                                                    I agree to the <Link to="terms-condition-page.html">Terms of Service</Link> and <Link to="terms-condition-page.html">Privacy Policy.</Link>
                                                 </span>
                                             </label>
                                         </div>

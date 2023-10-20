@@ -1,8 +1,10 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
+
 
 import instructor from '../../../assets/images/instructor/instructor-img-5.png'
-import dollar from '../../../assets/images/svg/dollor.svg'
-import graph from '../../../assets/images/svg/graph.svg'
+import dollar from '../../../assets/images/svg/dollor.png'
+import graph from '../../../assets/images/svg/graph.png'
 
 const Instructor = () => {
   return (
@@ -35,9 +37,9 @@ const Instructor = () => {
                 Instructors from around the world teach millions of students on Geeks. We provide the tools and skills
                 to teach what you love.
               </p>
-              <a href="#" className="btn btn-white mt-4">
+              <Link to="#" className="btn btn-white mt-4">
                 Start Teaching Today
-              </a>
+              </Link>
             </div>
           </div>
         </div>

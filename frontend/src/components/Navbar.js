@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 //images
 import logo from '../assets/images/brand/logo/L2HomeLogo.png'
@@ -9,130 +10,130 @@ const Navbar = () => {
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid px-0">
                 <div class="d-flex">
-                    <a class="navbar-brand" href="../../index.html"><img src={logo} alt="" /></a>
+                    <Link class="navbar-brand" to="../../index.html"><img src={logo} alt="" /></ Link>
                     <div class="dropdown d-none d-md-block">
                         <button class="btn btn-light-primary text-primary" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fe fe-list me-2 align-middle "></i>Category
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                             <li class="dropdown-submenu dropend">
-                                <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">
+                                <Link class="dropdown-item dropdown-list-group-item dropdown-toggle" to="#">
                                     Web Development
-                                </a>
+                                </ Link>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a class="dropdown-item" href="../../pages/course-category.html">
-                                            Bootstrap</a>
+                                        <Link class="dropdown-item" to="../../pages/course-category.html">
+                                            Bootstrap</ Link>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="../../pages/course-category.html">
+                                        <Link class="dropdown-item" to="../../pages/course-category.html">
                                             React
-                                        </a>
+                                        </ Link>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="../../pages/course-category.html">
-                                            GraphQl</a>
+                                        <Link class="dropdown-item" to="../../pages/course-category.html">
+                                            GraphQl</ Link>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="../../pages/course-category.html">
-                                            Gatsby</a>
+                                        <Link class="dropdown-item" to="../../pages/course-category.html">
+                                            Gatsby</ Link>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="../../pages/course-category.html">
-                                            Grunt</a>
+                                        <Link class="dropdown-item" to="../../pages/course-category.html">
+                                            Grunt</ Link>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="../../pages/course-category.html">
-                                            Svelte</a>
+                                        <Link class="dropdown-item" to="../../pages/course-category.html">
+                                            Svelte</ Link>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="../../pages/course-category.html">
-                                            Meteor</a>
+                                        <Link class="dropdown-item" to="../../pages/course-category.html">
+                                            Meteor</ Link>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="../../pages/course-category.html">
-                                            HTML5</a>
+                                        <Link class="dropdown-item" to="../../pages/course-category.html">
+                                            HTML5</ Link>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="../../pages/course-category.html">
-                                            Angular</a>
+                                        <Link class="dropdown-item" to="../../pages/course-category.html">
+                                            Angular</ Link>
                                     </li>
                                 </ul>
                             </li>
                             <li class="dropdown-submenu dropend">
-                                <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">
+                                <Link class="dropdown-item dropdown-list-group-item dropdown-toggle" to="#">
                                     Design
-                                </a>
+                                </ Link>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a class="dropdown-item" href="../../pages/course-category.html">
-                                            Graphic Design</a>
+                                        <Link class="dropdown-item" to="../../pages/course-category.html">
+                                            Graphic Design</ Link>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="../../pages/course-category.html">
+                                        <Link class="dropdown-item" to="../../pages/course-category.html">
                                             Illustrator
-                                        </a>
+                                        </ Link>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="../../pages/course-category.html">
-                                            UX / UI Design</a>
+                                        <Link class="dropdown-item" to="../../pages/course-category.html">
+                                            UX / UI Design</ Link>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="../../pages/course-category.html">
-                                            Figma Design</a>
+                                        <Link class="dropdown-item" to="../../pages/course-category.html">
+                                            Figma Design</ Link>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="../../pages/course-category.html">
-                                            Adobe XD</a>
+                                        <Link class="dropdown-item" to="../../pages/course-category.html">
+                                            Adobe XD</ Link>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="../../pages/course-category.html">
-                                            Sketch</a>
+                                        <Link class="dropdown-item" to="../../pages/course-category.html">
+                                            Sketch</ Link>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="../../pages/course-category.html">
-                                            Icon Design</a>
+                                        <Link class="dropdown-item" to="../../pages/course-category.html">
+                                            Icon Design</ Link>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="../../pages/course-category.html">
-                                            Photoshop</a>
+                                        <Link class="dropdown-item" to="../../pages/course-category.html">
+                                            Photoshop</ Link>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="../../pages/course-category.html" class="dropdown-item">
+                                <Link to="../../pages/course-category.html" class="dropdown-item">
                                     Mobile App
-                                </a>
+                                </ Link>
                             </li>
                             <li>
-                                <a href="../../pages/course-category.html" class="dropdown-item">
+                                <Link to="../../pages/course-category.html" class="dropdown-item">
                                     IT Software
-                                </a>
+                                </ Link>
                             </li>
                             <li>
-                                <a href="../../pages/course-category.html" class="dropdown-item">
+                                <Link to="../../pages/course-category.html" class="dropdown-item">
                                     Marketing
-                                </a>
+                                </ Link>
                             </li>
                             <li>
-                                <a href="../../pages/course-category.html" class="dropdown-item">
+                                <Link to="../../pages/course-category.html" class="dropdown-item">
                                     Music
-                                </a>
+                                </ Link>
                             </li>
                             <li>
-                                <a href="../../pages/course-category.html" class="dropdown-item">
+                                <Link to="../../pages/course-category.html" class="dropdown-item">
                                     Life Style
-                                </a>
+                                </ Link>
                             </li>
                             <li>
-                                <a href="../../pages/course-category.html" class="dropdown-item">
+                                <Link to="../../pages/course-category.html" class="dropdown-item">
                                     Business
-                                </a>
+                                </ Link>
                             </li>
                             <li>
-                                <a href="../../pages/course-category.html" class="dropdown-item">
+                                <Link to="../../pages/course-category.html" class="dropdown-item">
                                     Photography
-                                </a>
+                                </ Link>
                             </li>
                         </ul>
                     </div>
@@ -140,15 +141,15 @@ const Navbar = () => {
                 </div>
                 <div class="order-lg-3">
                     <div class="d-flex align-items-center">
-                        <a href="#" class="form-check form-switch theme-switch btn btn-light btn-icon rounded-circle me-2">
+                        <Link to="#" class="form-check form-switch theme-switch btn btn-light btn-icon rounded-circle me-2">
                             <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
                             <label class="form-check-label" for="flexSwitchCheckDefault"></label>
 
-                        </a>
-                        <a href="#" class="btn btn-icon btn-light rounded-circle"><i class="fe fe-shopping-cart text-muted align-middle"></i>
-                        </a>
-                        <a href="../../pages/sign-in.html" class="btn btn-outline-primary ms-2">Log in</a>
-                        <a href="../../pages/sign-up.html" class="btn btn-primary ms-1  d-none d-lg-block">Sign up</a>
+                        </ Link>
+                        <Link to="#" class="btn btn-icon btn-light rounded-circle"><i class="fe fe-shopping-cart text-muted align-middle"></i>
+                        </ Link>
+                        <Link to="/login" class="btn btn-outline-primary ms-2">Log in</ Link>
+                        <Link to="/signup" class="btn btn-primary ms-1  d-none d-lg-block">Sign up</ Link>
                         {/* { Button } */}
                         <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="icon-bar top-bar mt-0"></span>
@@ -170,49 +171,49 @@ const Navbar = () => {
                             <input type="search" class="form-control ps-6" placeholder="Search Courses" />
                         </form>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarLanding" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <Link class="nav-link dropdown-toggle" to="#" id="navbarLanding" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Landings
-                            </a>
+                            </ Link>
                             <ul class="dropdown-menu" aria-labelledby="navbarLanding">
                                 <li>
                                     <h4 class="dropdown-header">Landings</h4>
                                 </li>
                                 <li>
-                                    <a href="../../pages/landings/landing-education.html" class="dropdown-item d-flex justify-content-between">
+                                    <Link to="../../pages/landings/landing-education.html" class="dropdown-item d-flex justify-content-between">
                                         Education <span class="badge bg-primary ms-1">New</span>
-                                    </a>
+                                    </ Link>
                                 </li>
                                 <li>
-                                    <a href="../../pages/landings/home-academy.html" class="dropdown-item d-flex justify-content-between">
+                                    <Link to="../../pages/landings/home-academy.html" class="dropdown-item d-flex justify-content-between">
                                         Home Academy
-                                    </a>
+                                    </ Link>
                                 </li>
                                 <li>
-                                    <a href="../../pages/landings/landing-courses.html" class="dropdown-item">
+                                    <Link to="../../pages/landings/landing-courses.html" class="dropdown-item">
                                         Courses
-                                    </a>
+                                    </ Link>
                                 </li>
                                 <li>
-                                    <a href="../../pages/landings/course-lead.html" class="dropdown-item">
+                                    <Link to="../../pages/landings/course-lead.html" class="dropdown-item">
                                         Lead Course
-                                    </a>
+                                    </ Link>
                                 </li>
                                 <li>
-                                    <a href="../../pages/landings/request-access.html" class="dropdown-item">
+                                    <Link to="../../pages/landings/request-access.html" class="dropdown-item">
                                         Request Access
-                                    </a>
+                                    </ Link>
                                 </li>
                                 <li>
-                                    <a href="../../pages/landings/landing-sass.html" class="dropdown-item">
+                                    <Link to="../../pages/landings/landing-sass.html" class="dropdown-item">
                                         SaaS
-                                    </a>
+                                    </ Link>
                                 </li>
 
 
                                 <li>
-                                    <a href="../../pages/landings/landing-job.html" class="dropdown-item d-flex justify-content-between">
+                                    <Link to="../../pages/landings/landing-job.html" class="dropdown-item d-flex justify-content-between">
                                         Job Listing
-                                    </a>
+                                    </ Link>
                                 </li>
 
 
@@ -220,195 +221,195 @@ const Navbar = () => {
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarPages" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <Link class="nav-link dropdown-toggle" to="#" id="navbarPages" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Pages
-                            </a>
+                            </ Link>
                             <ul class="dropdown-menu dropdown-menu-arrow" aria-labelledby="navbarPages">
                                 <li class="dropdown-submenu dropend">
-                                    <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">
+                                    <Link class="dropdown-item dropdown-list-group-item dropdown-toggle" to="#">
                                         Courses
-                                    </a>
+                                    </ Link>
                                     <ul class="dropdown-menu">
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/course-single.html">
+                                            <Link class="dropdown-item" to="../../pages/course-single.html">
                                                 Course Single
-                                            </a>
+                                            </ Link>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/course-single-v2.html">
+                                            <Link class="dropdown-item" to="../../pages/course-single-v2.html">
                                                 Course Single v2
-                                            </a>
+                                            </ Link>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/course-resume.html">
+                                            <Link class="dropdown-item" to="../../pages/course-resume.html">
                                                 Course Resume
-                                            </a>
+                                            </ Link>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/course-category.html">
+                                            <Link class="dropdown-item" to="../../pages/course-category.html">
                                                 Course Category
-                                            </a>
+                                            </ Link>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/course-checkout.html">
+                                            <Link class="dropdown-item" to="../../pages/course-checkout.html">
                                                 Course Checkout
-                                            </a>
+                                            </ Link>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/course-filter-list.html">
+                                            <Link class="dropdown-item" to="../../pages/course-filter-list.html">
                                                 Course List/Grid
-                                            </a>
+                                            </ Link>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/add-course.html">
+                                            <Link class="dropdown-item" to="../../pages/add-course.html">
                                                 Add New Course
-                                            </a>
+                                            </ Link>
                                         </li>
                                     </ul>
                                 </li>
                                 <li class="dropdown-submenu dropend">
-                                    <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">
+                                    <Link class="dropdown-item dropdown-list-group-item dropdown-toggle" to="#">
                                         Paths
-                                    </a>
+                                    </ Link>
                                     <ul class="dropdown-menu">
                                         <li>
-                                            <a href="../../pages/course-path.html" class="dropdown-item">
+                                            <Link to="../../pages/course-path.html" class="dropdown-item">
                                                 Browse Path
-                                            </a>
+                                            </ Link>
                                         </li>
                                         <li>
-                                            <a href="../../pages/course-path-single.html" class="dropdown-item">
+                                            <Link to="../../pages/course-path-single.html" class="dropdown-item">
                                                 Path Single
-                                            </a>
+                                            </ Link>
                                         </li>
                                     </ul>
                                 </li>
                                 <li class="dropdown-submenu dropend">
-                                    <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">
+                                    <Link class="dropdown-item dropdown-list-group-item dropdown-toggle" to="#">
                                         Blog
-                                    </a>
+                                    </ Link>
                                     <ul class="dropdown-menu">
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/blog.html">
-                                                Listing</a>
+                                            <Link class="dropdown-item" to="../../pages/blog.html">
+                                                Listing</ Link>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/blog-single.html">
+                                            <Link class="dropdown-item" to="../../pages/blog-single.html">
                                                 Article
-                                            </a>
+                                            </ Link>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/blog-category.html">
-                                                Category</a>
+                                            <Link class="dropdown-item" to="../../pages/blog-category.html">
+                                                Category</ Link>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/blog-sidebar.html">
-                                                Sidebar</a>
+                                            <Link class="dropdown-item" to="../../pages/blog-sidebar.html">
+                                                Sidebar</ Link>
                                         </li>
                                     </ul>
                                 </li>
 
                                 <li class="dropdown-submenu dropend">
-                                    <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">
+                                    <Link class="dropdown-item dropdown-list-group-item dropdown-toggle" to="#">
                                         Career
-                                    </a>
+                                    </ Link>
                                     <ul class="dropdown-menu">
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/career.html">
-                                                Overview</a>
+                                            <Link class="dropdown-item" to="../../pages/career.html">
+                                                Overview</ Link>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/career-list.html">
+                                            <Link class="dropdown-item" to="../../pages/career-list.html">
                                                 Listing
-                                            </a>
+                                            </ Link>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/career-single.html">
-                                                Opening</a>
+                                            <Link class="dropdown-item" to="../../pages/career-single.html">
+                                                Opening</ Link>
                                         </li>
 
                                     </ul>
                                 </li>
                                 <li class="dropdown-submenu dropend">
-                                    <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">
+                                    <Link class="dropdown-item dropdown-list-group-item dropdown-toggle" to="#">
                                         Portfolio
-                                    </a>
+                                    </ Link>
                                     <ul class="dropdown-menu">
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/portfolio.html">
-                                                List</a>
+                                            <Link class="dropdown-item" to="../../pages/portfolio.html">
+                                                List</ Link>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/portfolio-single.html">
+                                            <Link class="dropdown-item" to="../../pages/portfolio-single.html">
                                                 Single
-                                            </a>
+                                            </ Link>
                                         </li>
 
 
                                     </ul>
                                 </li>
                                 <li class="dropdown-submenu dropend">
-                                    <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">
+                                    <Link class="dropdown-item dropdown-list-group-item dropdown-toggle" to="#">
                                         Job
-                                    </a>
+                                    </ Link>
                                     <ul class="dropdown-menu">
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/landings/landing-job.html">
-                                                Home</a>
+                                            <Link class="dropdown-item" to="../../pages/landings/landing-job.html">
+                                                Home</ Link>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/jobs/job-listing.html">
+                                            <Link class="dropdown-item" to="../../pages/jobs/job-listing.html">
                                                 List
-                                            </a>
+                                            </ Link>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/jobs/job-grid.html">
+                                            <Link class="dropdown-item" to="../../pages/jobs/job-grid.html">
                                                 Grid
-                                            </a>
+                                            </ Link>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/jobs/job-single.html">
+                                            <Link class="dropdown-item" to="../../pages/jobs/job-single.html">
                                                 Single
-                                            </a>
+                                            </ Link>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/jobs/company-list.html">
+                                            <Link class="dropdown-item" to="../../pages/jobs/company-list.html">
                                                 Company List
-                                            </a>
+                                            </ Link>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/jobs/company-about.html">
+                                            <Link class="dropdown-item" to="../../pages/jobs/company-about.html">
                                                 Company Single
-                                            </a>
+                                            </ Link>
                                         </li>
 
 
                                     </ul>
                                 </li>
                                 <li class="dropdown-submenu dropend">
-                                    <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">
+                                    <Link class="dropdown-item dropdown-list-group-item dropdown-toggle" to="#">
                                         Specialty
-                                    </a>
+                                    </ Link>
                                     <ul class="dropdown-menu">
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/coming-soon.html">
+                                            <Link class="dropdown-item" to="../../pages/coming-soon.html">
                                                 Coming Soon
-                                            </a>
+                                            </ Link>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/404-error.html">
+                                            <Link class="dropdown-item" to="../../pages/404-error.html">
                                                 Error 404
-                                            </a>
+                                            </ Link>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/maintenance-mode.html">
+                                            <Link class="dropdown-item" to="../../pages/maintenance-mode.html">
                                                 Maintenance Mode
-                                            </a>
+                                            </ Link>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/terms-condition-page.html">
+                                            <Link class="dropdown-item" to="../../pages/terms-condition-page.html">
                                                 Terms &amp; Conditions
-                                            </a>
+                                            </ Link>
                                         </li>
                                     </ul>
                                 </li>
@@ -418,72 +419,72 @@ const Navbar = () => {
 
 
                                 <li>
-                                    <a class="dropdown-item" href="../../pages/about.html">
+                                    <Link class="dropdown-item" to="../../pages/about.html">
                                         About
-                                    </a>
+                                    </ Link>
                                 </li>
                                 <li class="dropdown-submenu dropend">
-                                    <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">
+                                    <Link class="dropdown-item dropdown-list-group-item dropdown-toggle" to="#">
                                         Help Center
-                                    </a>
+                                    </ Link>
                                     <ul class="dropdown-menu">
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/help-center.html">
+                                            <Link class="dropdown-item" to="../../pages/help-center.html">
                                                 Help Center
-                                            </a>
+                                            </ Link>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/help-center-faq.html">
+                                            <Link class="dropdown-item" to="../../pages/help-center-faq.html">
                                                 FAQ's
-                                            </a>
+                                            </ Link>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/help-center-guide.html">
+                                            <Link class="dropdown-item" to="../../pages/help-center-guide.html">
                                                 Guide
-                                            </a>
+                                            </ Link>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/help-center-guide-single.html">
+                                            <Link class="dropdown-item" to="../../pages/help-center-guide-single.html">
                                                 Guide Single
-                                            </a>
+                                            </ Link>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/help-center-support.html">
+                                            <Link class="dropdown-item" to="../../pages/help-center-support.html">
                                                 Support
-                                            </a>
+                                            </ Link>
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="../../pages/pricing.html">
+                                    <Link class="dropdown-item" to="../../pages/pricing.html">
                                         Pricing
-                                    </a>
+                                    </ Link>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="../../pages/compare-plan.html">
+                                    <Link class="dropdown-item" to="../../pages/compare-plan.html">
                                         Compare Plan
-                                    </a>
+                                    </ Link>
                                 </li>
 
                                 <li>
-                                    <a class="dropdown-item" href="../../pages/contact.html">
+                                    <Link class="dropdown-item" to="../../pages/contact.html">
                                         Contact
-                                    </a>
+                                    </ Link>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <Link class="nav-link dropdown-toggle" to="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Accounts
-                            </a>
+                            </ Link>
                             <ul class="dropdown-menu dropdown-menu-arrow">
                                 <li>
                                     <h4 class="dropdown-header">Accounts</h4>
                                 </li>
                                 <li class="dropdown-submenu dropend">
-                                    <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">
+                                    <Link class="dropdown-item dropdown-list-group-item dropdown-toggle" to="#">
                                         Instructor
-                                    </a>
+                                    </ Link>
                                     <ul class="dropdown-menu">
                                         <li class="text-wrap">
                                             <h5 class="dropdown-header text-dark">Instructor</h5>
@@ -495,55 +496,55 @@ const Navbar = () => {
                                             logi<hr class="mx-3" />
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/dashboard-instructor.html">
-                                                Dashboard</a>
+                                            <Link class="dropdown-item" to="../../pages/dashboard-instructor.html">
+                                                Dashboard</ Link>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/instructor-profile.html">
-                                                Profile</a>
+                                            <Link class="dropdown-item" to="../../pages/instructor-profile.html">
+                                                Profile</ Link>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/instructor-courses.html">
+                                            <Link class="dropdown-item" to="../../pages/instructor-courses.html">
                                                 My Courses
-                                            </a>
+                                            </ Link>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/instructor-order.html">
-                                                Orders</a>
+                                            <Link class="dropdown-item" to="../../pages/instructor-order.html">
+                                                Orders</ Link>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/instructor-reviews.html">
-                                                Reviews</a>
+                                            <Link class="dropdown-item" to="../../pages/instructor-reviews.html">
+                                                Reviews</ Link>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/instructor-students.html">
-                                                Students</a>
+                                            <Link class="dropdown-item" to="../../pages/instructor-students.html">
+                                                Students</ Link>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/instructor-payouts.html">
-                                                Payouts</a>
+                                            <Link class="dropdown-item" to="../../pages/instructor-payouts.html">
+                                                Payouts</ Link>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/instructor-earning.html">
-                                                Earning</a>
+                                            <Link class="dropdown-item" to="../../pages/instructor-earning.html">
+                                                Earning</ Link>
                                         </li>
                                         <li class="dropdown-submenu dropend">
-                                            <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">
+                                            <Link class="dropdown-item dropdown-list-group-item dropdown-toggle" to="#">
                                                 Quiz
                                                 <span class="badge bg-primary ms-1"> New </span>
-                                            </a>
+                                            </ Link>
                                             <ul class="dropdown-menu">
                                                 <li>
-                                                    <a class="dropdown-item" href="../../pages/instructor-quiz.html">
-                                                        Quiz</a>
+                                                    <Link class="dropdown-item" to="../../pages/instructor-quiz.html">
+                                                        Quiz</ Link>
                                                 </li>
                                                 <li>
-                                                    <a class="dropdown-item" href="../../pages/instructor-quiz-details.html">
-                                                        Single</a>
+                                                    <Link class="dropdown-item" to="../../pages/instructor-quiz-details.html">
+                                                        Single</ Link>
                                                 </li>
                                                 <li>
-                                                    <a class="dropdown-item" href="../../pages/instructor-quiz-result.html">
-                                                        Result</a>
+                                                    <Link class="dropdown-item" to="../../pages/instructor-quiz-result.html">
+                                                        Result</ Link>
                                                 </li>
                                             </ul>
                                         </li>
@@ -551,9 +552,9 @@ const Navbar = () => {
                                     </ul>
                                 </li>
                                 <li class="dropdown-submenu dropend">
-                                    <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">
+                                    <Link class="dropdown-item dropdown-list-group-item dropdown-toggle" to="#">
                                         Students
-                                    </a>
+                                    </ Link>
                                     <ul class="dropdown-menu">
                                         <li class="text-wrap">
                                             <h5 class="dropdown-header text-dark">Students</h5>
@@ -565,68 +566,68 @@ const Navbar = () => {
                                             logi<hr class="mx-3" />
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/dashboard-student.html">
-                                                Dashboard</a>
+                                            <Link class="dropdown-item" to="../../pages/dashboard-student.html">
+                                                Dashboard</ Link>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/student-subscriptions.html">
+                                            <Link class="dropdown-item" to="../../pages/student-subscriptions.html">
                                                 Subscriptions
-                                            </a>
+                                            </ Link>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/payment-method.html">
-                                                Payments</a>
+                                            <Link class="dropdown-item" to="../../pages/payment-method.html">
+                                                Payments</ Link>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/billing-info.html">
-                                                Billing Info</a>
+                                            <Link class="dropdown-item" to="../../pages/billing-info.html">
+                                                Billing Info</ Link>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/invoice.html">
-                                                Invoice</a>
+                                            <Link class="dropdown-item" to="../../pages/invoice.html">
+                                                Invoice</ Link>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/invoice-details.html">
-                                                Invoice Details</a>
+                                            <Link class="dropdown-item" to="../../pages/invoice-details.html">
+                                                Invoice Details</ Link>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/dashboard-student.html">
-                                                Bookmarked</a>
+                                            <Link class="dropdown-item" to="../../pages/dashboard-student.html">
+                                                Bookmarked</ Link>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="../../pages/dashboard-student.html">
-                                                My Path</a>
+                                            <Link class="dropdown-item" to="../../pages/dashboard-student.html">
+                                                My Path</ Link>
                                         </li>
                                         <li class="dropdown-submenu dropend">
-                                            <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">
+                                            <Link class="dropdown-item dropdown-list-group-item dropdown-toggle" to="#">
                                                 Quiz
                                                 <span class="badge bg-primary ms-1"> New </span>
-                                            </a>
+                                            </ Link>
                                             <ul class="dropdown-menu">
                                                 <li>
-                                                    <a class="dropdown-item" href="../../pages/student-quiz.html">
-                                                        Quiz</a>
+                                                    <Link class="dropdown-item" to="../../pages/student-quiz.html">
+                                                        Quiz</ Link>
                                                 </li>
                                                 <li>
-                                                    <a class="dropdown-item" href="../../pages/student-quiz-attempt.html">
-                                                        Attempt</a>
+                                                    <Link class="dropdown-item" to="../../pages/student-quiz-attempt.html">
+                                                        Attempt</ Link>
                                                 </li>
                                                 <li>
-                                                    <a class="dropdown-item" href="../../pages/student-quiz-start.html">
-                                                        Start</a>
+                                                    <Link class="dropdown-item" to="../../pages/student-quiz-start.html">
+                                                        Start</ Link>
                                                 </li>
                                                 <li>
-                                                    <a class="dropdown-item" href="../../pages/student-quiz-result.html">
-                                                        Result</a>
+                                                    <Link class="dropdown-item" to="../../pages/student-quiz-result.html">
+                                                        Result</ Link>
                                                 </li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </li>
                                 <li class="dropdown-submenu dropend">
-                                    <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">
+                                    <Link class="dropdown-item dropdown-list-group-item dropdown-toggle" to="#">
                                         Admin
-                                    </a>
+                                    </ Link>
                                     <ul class="dropdown-menu">
                                         <li class="text-wrap">
                                             <h5 class="dropdown-header text-dark">Master Admin</h5>
@@ -639,7 +640,7 @@ const Navbar = () => {
                                             logi<hr class="mx-3" />
                                         </li>
                                         <li class="px-3 d-grid">
-                                            <a href="../../pages/dashboard/admin-dashboard.html" class="btn btn-sm btn-primary">Go to Dashboard</a>
+                                            <Link to="../../pages/dashboard/admin-dashboard.html" class="btn btn-sm btn-primary">Go to Dashboard</ Link>
                                         </li>
                                     </ul>
                                 </li>
@@ -647,61 +648,61 @@ const Navbar = () => {
                                     logi<hr class="mx-3" />
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="../../pages/sign-in.html">
+                                    <Link class="dropdown-item" to="../../pages/sign-in.html">
                                         Sign In
-                                    </a>
+                                    </ Link>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="../../pages/sign-up.html">
+                                    <Link class="dropdown-item" to="../../pages/sign-up.html">
                                         Sign Up
-                                    </a>
+                                    </ Link>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="../../pages/forget-password.html">
+                                    <Link class="dropdown-item" to="../../pages/forget-password.html">
                                         Forgot Password
-                                    </a>
+                                    </ Link>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="../../pages/profile-edit.html">
+                                    <Link class="dropdown-item" to="../../pages/profile-edit.html">
                                         Edit Profile
-                                    </a>
+                                    </ Link>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="../../pages/security.html">
+                                    <Link class="dropdown-item" to="../../pages/security.html">
                                         Security
-                                    </a>
+                                    </ Link>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="../../pages/social-profile.html">
+                                    <Link class="dropdown-item" to="../../pages/social-profile.html">
                                         Social Profiles
-                                    </a>
+                                    </ Link>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="../../pages/notifications.html">
+                                    <Link class="dropdown-item" to="../../pages/notifications.html">
                                         Notifications
-                                    </a>
+                                    </ Link>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="../../pages/profile-privacy.html">
+                                    <Link class="dropdown-item" to="../../pages/profile-privacy.html">
                                         Privacy Settings
-                                    </a>
+                                    </ Link>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="../../pages/delete-profile.html">
+                                    <Link class="dropdown-item" to="../../pages/delete-profile.html">
                                         Delete Profile
-                                    </a>
+                                    </ Link>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="../../pages/linked-accounts.html">
+                                    <Link class="dropdown-item" to="../../pages/linked-accounts.html">
                                         Linked Accounts
-                                    </a>
+                                    </ Link>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown dropdown-fullwidth">
-                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <Link class="nav-link dropdown-toggle" to="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Mega Menu
-                            </a>
+                            </ Link>
                             <div class="dropdown-menu dropdown-menu-md">
                                 <div class="px-4 pt-2 pb-2">
                                     <div class="row">
@@ -717,7 +718,7 @@ const Navbar = () => {
                                                 <h5 class="mb-0">Degrees</h5>
                                             </div>
                                             <div class="">
-                                                <a href="#">
+                                                <Link to="#">
                                                     <div class="d-flex mb-3">
                                                         <img src="../../assets/images/png/degree-1.png" alt="" />
                                                         <div class="ms-2">
@@ -726,8 +727,8 @@ const Navbar = () => {
                                                         </div>
 
                                                     </div>
-                                                </a>
-                                                <a href="#">
+                                                </ Link>
+                                                <Link to="#">
                                                     <div class="d-flex mb-3">
                                                         <img src="../../assets/images/png/degree-2.png" alt="" />
                                                         <div class="ms-2">
@@ -736,8 +737,8 @@ const Navbar = () => {
                                                         </div>
 
                                                     </div>
-                                                </a>
-                                                <a href="#">
+                                                </ Link>
+                                                <Link to="#">
                                                     <div class="d-flex mb-3">
                                                         <img src="../../assets/images/png/degree-3.png" alt="" />
                                                         <div class="ms-2">
@@ -746,8 +747,8 @@ const Navbar = () => {
                                                         </div>
 
                                                     </div>
-                                                </a>
-                                                <a href="#">
+                                                </ Link>
+                                                <Link to="#">
                                                     <div class="d-flex mb-3">
                                                         <img src="../../assets/images/png/degree-4.png" alt="" />
                                                         <div class="ms-2">
@@ -756,9 +757,9 @@ const Navbar = () => {
                                                         </div>
 
                                                     </div>
-                                                </a>
+                                                </ Link>
                                                 <div class="mt-4">
-                                                    <a href="#" class="btn btn-outline-primary btn-sm">View all degree</a>
+                                                    <Link to="#" class="btn btn-outline-primary btn-sm">View all degree</ Link>
                                                 </div>
                                             </div>
 
@@ -768,7 +769,7 @@ const Navbar = () => {
                                                 <h5 class="mb-0">Certificate Programs</h5>
                                             </div>
                                             <div class="">
-                                                <a href="#">
+                                                <Link to="#">
                                                     <div class="d-flex mb-3">
                                                         <img src="../../assets/images/png/google.png" alt="" />
                                                         <div class="ms-2">
@@ -777,8 +778,8 @@ const Navbar = () => {
                                                         </div>
 
                                                     </div>
-                                                </a>
-                                                <a href="#">
+                                                </ Link>
+                                                <Link to="#">
                                                     <div class="d-flex mb-3">
                                                         <img src="../../assets/images/png/IBM.png" alt="" />
                                                         <div class="ms-2">
@@ -787,8 +788,8 @@ const Navbar = () => {
                                                         </div>
 
                                                     </div>
-                                                </a>
-                                                <a href="#">
+                                                </ Link>
+                                                <Link to="#">
                                                     <div class="d-flex mb-3">
                                                         <img src="../../assets/images/png/microsoft.png" alt="" />
                                                         <div class="ms-2">
@@ -797,8 +798,8 @@ const Navbar = () => {
                                                         </div>
 
                                                     </div>
-                                                </a>
-                                                <a href="#">
+                                                </ Link>
+                                                <Link to="#">
                                                     <div class="d-flex mb-3">
                                                         <img src="../../assets/images/png/tensorflow.png" alt="" />
                                                         <div class="ms-2">
@@ -807,8 +808,8 @@ const Navbar = () => {
                                                         </div>
 
                                                     </div>
-                                                </a>
-                                                <a href="#">
+                                                </ Link>
+                                                <Link to="#">
                                                     <div class="d-flex mb-3">
                                                         <img src="../../assets/images/png/meta.png" alt="" />
                                                         <div class="ms-2">
@@ -817,9 +818,9 @@ const Navbar = () => {
                                                         </div>
 
                                                     </div>
-                                                </a>
+                                                </ Link>
                                                 <div class="mt-4">
-                                                    <a href="#" class="btn btn-outline-primary btn-sm">View all Certificates</a>
+                                                    <Link to="#" class="btn btn-outline-primary btn-sm">View all Certificates</ Link>
                                                 </div>
                                             </div>
 
@@ -831,34 +832,34 @@ const Navbar = () => {
                                             <div class="">
                                                 <ul class="nav flex-column">
                                                     <li class="nav-item">
-                                                        <a href="#" class="nav-link">Python</a>
+                                                        <Link to="#" class="nav-link">Python</ Link>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a href="#" class="nav-link">SQL</a>
+                                                        <Link to="#" class="nav-link">SQL</ Link>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a href="#" class="nav-link">Microsoft Excel</a>
+                                                        <Link to="#" class="nav-link">Microsoft Excel</ Link>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a href="#" class="nav-link">Machine Learning</a>
+                                                        <Link to="#" class="nav-link">Machine Learning</ Link>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a href="#" class="nav-link">Data Science</a>
+                                                        <Link to="#" class="nav-link">Data Science</ Link>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a href="#" class="nav-link">Data Analytics</a>
+                                                        <Link to="#" class="nav-link">Data Analytics</ Link>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a href="#" class="nav-link">Power BI</a>
+                                                        <Link to="#" class="nav-link">Power BI</ Link>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a href="#" class="nav-link">Artificial Intelligence</a>
+                                                        <Link to="#" class="nav-link">Artificial Intelligence</ Link>
                                                     </li>
 
                                                 </ul>
 
                                                 <div class="mt-4">
-                                                    <a href="#" class="btn btn-outline-primary btn-sm">View all Skills</a>
+                                                    <Link to="#" class="btn btn-outline-primary btn-sm">View all Skills</ Link>
                                                 </div>
                                             </div>
 
@@ -868,12 +869,12 @@ const Navbar = () => {
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <Link class="nav-link" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fe fe-more-horizontal"></i>
-                            </a>
+                            </ Link>
                             <div class="dropdown-menu dropdown-menu-md" aria-labelledby="navbarDropdown">
                                 <div class="list-group">
-                                    <a class="list-group-item list-group-item-action border-0" href="../../docs/index.html">
+                                    <Link class="list-group-item list-group-item-action border-0" to="../../docs/index.html">
                                         <div class="d-flex align-items-center">
                                             <i class="fe fe-file-text fs-3 text-primary"></i>
                                             <div class="ms-3">
@@ -883,8 +884,8 @@ const Navbar = () => {
                                                 </p>
                                             </div>
                                         </div>
-                                    </a>
-                                    <a class="list-group-item list-group-item-action border-0" href="../../docs/bootstrap-5-snippets.html">
+                                    </ Link>
+                                    <Link class="list-group-item list-group-item-action border-0" to="../../docs/bootstrap-5-snippets.html">
                                         <div class="d-flex align-items-center">
                                             <i class="bi bi-files fs-3 text-primary"></i>
                                             <div class="ms-3">
@@ -894,8 +895,8 @@ const Navbar = () => {
                                                 <p class="mb-0 fs-6">Bunch of Snippet</p>
                                             </div>
                                         </div>
-                                    </a>
-                                    <a class="list-group-item list-group-item-action border-0" href="../../docs/changelog.html">
+                                    </ Link>
+                                    <Link class="list-group-item list-group-item-action border-0" to="../../docs/changelog.html">
                                         <div class="d-flex align-items-center">
                                             <i class="fe fe-layers fs-3 text-primary"></i>
                                             <div class="ms-3">
@@ -905,8 +906,8 @@ const Navbar = () => {
                                                 <p class="mb-0 fs-6">See what's new</p>
                                             </div>
                                         </div>
-                                    </a>
-                                    <a class="list-group-item list-group-item-action border-0" href="https://geeksui.codescandy.com/geeks-rtl/" target="_blank">
+                                    </ Link>
+                                    <Link class="list-group-item list-group-item-action border-0" to="https://geeksui.codescandy.com/geeks-rtl/" target="_blank">
                                         <div class="d-flex align-items-center">
                                             <i class="fe fe-toggle-right fs-3 text-primary"></i>
                                             <div class="ms-3">
@@ -916,7 +917,7 @@ const Navbar = () => {
                                                 </p>
                                             </div>
                                         </div>
-                                    </a>
+                                    </ Link>
                                 </div>
                             </div>
                         </li>

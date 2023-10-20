@@ -1,4 +1,7 @@
 import React from "react";
+import {Link} from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
+
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { loginUser } from "../slice/loginSlice";
@@ -8,17 +11,24 @@ import { loginUser } from "../slice/loginSlice";
 import logo from '../../../assets/images/brand/logo/L2Logo.png'
 
 const Login = () => {
-
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [rememberMe, setRemeberMe] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async  (e) => {
     e.preventDefault();
-    console.log('enter submission')
-    dispatch(loginUser({ email, password }));
-    console.log('exit submission')
+    try {
+      const resultAction = await dispatch(loginUser({ email, password }));
+      if (loginUser.fulfilled.match(resultAction)) {
+        navigate('/'); // Redirect to the home page
+      } else {
+        console.log('Failed to log in');
+      }
+    } catch (error) {
+      console.log('Error logging in:', error.message);
+    }
 
   }
 
@@ -33,9 +43,9 @@ const Login = () => {
               {/* Card body */}
               <div className="card-body p-6">
                 <div className="mb-4 text-center">
-                  <a href="../index.html"><img src={logo} className="mb-4" alt="logo-icon" /></a>
+                  <Link to="../index.html"><img src={logo} className="mb-4" alt="logo-icon" /></Link>
                   <h1 className="mb-1 fw-bold">Sign in</h1>
-                  <span>Don’t have an account? <a href="sign-up.html" className="ms-1">Sign up</a></span>
+                  <span>Don’t have an account? <Link to="/signup" className="ms-1">Sign up</Link></span>
                 </div>
                 {/* Form */}
                 <form onSubmit={handleSubmit}>
@@ -75,7 +85,7 @@ const Login = () => {
                       <label className="form-check-label" htmlFor="rememberme">Remember me</label>
                     </div>
                     <div>
-                      <a href="forget-password.html">Forgot your password?</a>
+                      <Link to="forget-password.html">Forgot your password?</Link>
                     </div>
                   </div>
                   <div>
