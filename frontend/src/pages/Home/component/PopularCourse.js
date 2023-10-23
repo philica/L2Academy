@@ -7,7 +7,7 @@ import CourseCard from '../../../components/CourseCard'
 
 const PopularCourse = () => {
     return (
-        <section class="pb-lg-14 pb-8 bg-white">
+        <section class="pb-lg-14 pb-8 bg-white pt-5">
             {/* {<!-- row -->} */}
             <div class="container">
                 <div class="row">

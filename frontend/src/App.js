@@ -1,5 +1,8 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { useSelector } from "react-redux";
+
+import { useLogin } from './pages/Login/hooks/useLogin';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
@@ -24,6 +27,28 @@ import './assets/css/theme.min.css'
 
 
 function App() {
+
+  
+  const loggeduser = useSelector(state => state.login);
+  // handle login functionality 
+  const { loginFunction } = useLogin();
+  
+  
+    useEffect(() => {
+      
+        console.log('user logged', loggeduser.user)
+      // Dispatch an action or perform any initialization here
+      const user = JSON.parse(localStorage.getItem('user'));
+      if (user) {
+        console.log('The user logged in is', user.email)
+        //log user
+        loginFunction(user)
+      }
+      
+      console.log('Root component mounted')
+    }, []);
+
+
   return (
     <Router>
       <Routes>

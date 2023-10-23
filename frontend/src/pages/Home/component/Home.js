@@ -7,16 +7,22 @@ import Instructor from './Instructor'
 import Testimonial from './Testimonial'
 import Footer from '../../../components/Footer'
 
+import { UseSelector, useSelector } from 'react-redux'
+
+
 
 const Home = () => {
+
+
+  const user = useSelector(state => state.login.user)
   return (
     <>
     <Navbar />
     <main>
         <Intro />
-        <Numbers /> 
+       {!user && <Numbers /> }
         <PopularCourse />
-        <Instructor />
+       {!user && <Instructor />}
         <Testimonial />
         <Footer />
     </main>

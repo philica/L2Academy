@@ -10,10 +10,13 @@ import target from "../../../assets/images/background/acedamy-img/target.png"
 import sound from "../../../assets/images/background/acedamy-img/sound.png"
 import trophy from "../../../assets/images/background/acedamy-img/trophy.png"
 
+import { useSelector } from 'react-redux'
+
 const Intro = () => {
+  const user = useSelector(state => state.login.user)
   return (
     <>
-        <section className="py-lg-16 py-5">
+<section className="py-lg-10 py-3">
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-6 mb-6 mb-lg-0">
@@ -28,7 +31,7 @@ const Intro = () => {
               <p className="pe-lg-10 mb-5">
                 Start, switch, or advance your career with more than 5,000 courses, Professional Certificates, and degrees from world-class universities and companies.
               </p>
-              <Link to="#" className="btn btn-primary" style={{marginRight:"10px"}} >Join Free Now</Link>
+              <Link to="/login" className="btn btn-primary" style={{marginRight:"10px"}} >Join Free Now</Link>
               <Link to="#" className="btn btn-yellow ">Are you instructure</Link>
               
             </div>
