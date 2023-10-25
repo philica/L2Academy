@@ -1,7 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-
 import image from '../../../assets/images/background/acedamy-img/bg-thumb.png'
 import girl from "../../../assets/images/background/acedamy-img/girl-image.png"
 import frame1 from "../../../assets/images/background/acedamy-img/frame-1.png"
@@ -14,6 +13,7 @@ import { useSelector } from 'react-redux'
 
 const Intro = () => {
   const user = useSelector(state => state.login.user)
+  
   return (
     <>
 <section className="py-lg-10 py-3">
@@ -26,7 +26,7 @@ const Intro = () => {
                 Most trusted education platform
               </h5>
               <h1 className="display-3 fw-bold mb-3">
-              Dandeettii kee guddifadhuu fi <br/>hojii kee tarkaanfadhu
+              Dandeettii kee guddifadhuu hojii <br/>  kee tarkaanfachiisi
               </h1>
               <p className="pe-lg-10 mb-5">
                 Start, switch, or advance your career with more than 5,000 courses, Professional Certificates, and degrees from world-class universities and companies.

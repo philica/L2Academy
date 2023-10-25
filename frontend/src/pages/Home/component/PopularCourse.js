@@ -1,11 +1,20 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
-
+import { Link } from 'react-router-dom'
+import useFetchCourses from '../hooks/useFetchCourses'
 
 
 import CourseCard from '../../../components/CourseCard'
 
 const PopularCourse = () => {
+
+    const { courses, loading, error } = useFetchCourses();
+    if (loading) {
+        return <p>Loading...</p>;
+    }
+
+    if (error) {
+        return <p> Error {error}</p>;
+    }
     return (
         <section class="pb-lg-14 pb-8 bg-white pt-5">
             {/* {<!-- row -->} */}
@@ -55,14 +64,12 @@ const PopularCourse = () => {
 
                                 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
                                     {/* enter course card  here */}
-                                    <CourseCard />
-                                    <CourseCard />
-                                    <CourseCard />
-                                    <CourseCard />
-                                    <CourseCard />
-                                    <CourseCard />
-                                    <CourseCard />
-                                    <CourseCard />
+                                    {courses.map((course) => {
+                                        return (
+                                            <CourseCard key={course._id} course={course} />
+                                        );
+                                    })}
+                                    
                                 </div>
                             </div>
                             {/* {<!-- tab content -->} */}

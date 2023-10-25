@@ -14,6 +14,8 @@ import { Signup } from "./pages/Signup";
 import { Login } from "./pages/Login"
 //home page
 import { Home } from "./pages/Home"
+//course single page
+import { CourseSingle } from "./pages/CourseSingle"
 
 
 //library css
@@ -56,6 +58,7 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/signup" element={<Signup />} />
         <Route exact path="/login" element={<Login />} />
+        <Route exact path="/course" element={<CourseSingle />} />
         
       </Routes>
 

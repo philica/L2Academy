@@ -1,0 +1,193 @@
+{
+    "courses": [
+        {
+            "id": "123456789",
+            "_id": "123456789",
+            "course_title": "Introduction to React",
+            "course_description": "Learn the basics of React and build interactive web applications.",
+            "instructor_id": "987654321",
+            "course_category": [
+                "456789012",
+                "345678901"
+            ],
+            "course_level": "beginner",
+            "course_thumbnail": "https://www.example.com/thumbnail.jpg",
+            "course_promo_url": "https://www.example.com/promo-video",
+            "curriculum": {
+                "sections": [
+                    {
+                        "section_title": "Getting Started",
+                        "lectures": [
+                            {
+                                "lecture_title": "Introduction to React",
+                                "lecture_duration": "30m",
+                                "lecture_files": [
+                                    {
+                                        "file_title": "Slide Deck",
+                                        "file_url": "https://www.example.com/slide-deck.pdf"
+                                    }
+                                ]
+                            },
+                            {
+                                "lecture_title": "Setting Up Development Environment",
+                                "lecture_duration": "45m",
+                                "lecture_files": [
+                                    {
+                                        "file_title": "Installation Guide",
+                                        "file_url": "https://www.example.com/installation-guide.pdf"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "section_title": "Components and Props",
+                        "lectures": [
+                            {
+                                "lecture_title": "Introduction to Components",
+                                "lecture_duration": "1h",
+                                "lecture_files": [
+                                    {
+                                        "file_title": "Example Code",
+                                        "file_url": "https://www.example.com/example-code.zip"
+                                    }
+                                ]
+                            },
+                            {
+                                "lecture_title": "Working with Props",
+                                "lecture_duration": "1h 30m",
+                                "lecture_files": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            "tags": [
+                "React",
+                "Web Development"
+            ],
+            "duration": "4h 15m",
+            "rating": 4.5,
+            "prerequisite": "Basic knowledge of HTML, CSS, and JavaScript",
+            "price": 49.99,
+            "students_enrolled": 100,
+            "status": "pending",
+            "created_at": "2023-10-25T10:30:00Z"
+        },
+        {
+            "id": "987654321",
+            "_id": "987654321",
+            "course_title": "Advanced Python Programming",
+            "course_description": "Take your Python skills to the next level with advanced topics and techniques.",
+            "instructor_id": "123456789",
+            "course_category": [
+                "234567890",
+                "345678901"
+            ],
+            "course_level": "advanced",
+            "course_promo_url": "https://www.example.com/promo-video",
+            "curriculum": {
+                "sections": [
+                    {
+                        "section_title": "Object-Oriented Programming",
+                        "lectures": [
+                            {
+                                "lecture_title": "Classes and Objects",
+                                "lecture_duration": "1h",
+                                "lecture_files": []
+                            },
+                            {
+                                "lecture_title": "Inheritance and Polymorphism",
+                                "lecture_duration": "1h 30m",
+                                "lecture_files": []
+                            }
+                        ]
+                    },
+                    {
+                        "section_title": "Concurrency and Parallelism",
+                        "lectures": [
+                            {
+                                "lecture_title": "Threading and Multiprocessing",
+                                "lecture_duration": "1h 30m",
+                                "lecture_files": []
+                            },
+                            {
+                                "lecture_title": "Asynchronous Programming",
+                                "lecture_duration": "2h",
+                                "lecture_files": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            "tags": [
+                "Python",
+                "Programming",
+                "Advanced"
+            ],
+            "duration": "6h",
+            "rating": 4.8,
+            "prerequisite": "Proficiency in Python programming",
+            "price": 79.99,
+            "status": "accepted",
+            "created_at": "2023-10-20T15:45:00Z"
+        },
+        {
+            "id": "567890123",
+            "_id": "567890123",
+            "course_title": "Digital Marketing Fundamentals",
+            "course_description": "Gain a solid foundation in digital marketing and learn strategies for online success.",
+            "instructor_id": "123456789",
+            "course_category": [
+                "456789012",
+                "789012345"
+            ],
+            "course_level": "beginner",
+            "course_promo_url": "https://www.example.com/promo-video",
+            "curriculum": {
+                "sections": [
+                    {
+                        "section_title": "Introduction to Digital Marketing",
+                        "lectures": [
+                            {
+                                "lecture_title": "Overview of Digital Marketing",
+                                "lecture_duration": "1h",
+                                "lecture_files": []
+                            },
+                            {
+                                "lecture_title": "Creating a Digital Marketing Strategy",
+                                "lecture_duration": "1h 30m",
+                                "lecture_files": []
+                            }
+                        ]
+                    },
+                    {
+                        "section_title": "Search Engine Optimization (SEO)",
+                        "lectures": [
+                            {
+                                "lecture_title": "On-Page SEO Techniques",
+                                "lecture_duration": "1h 30m",
+                                "lecture_files": []
+                            },
+                            {
+                                "lecture_title": "Off-Page SEO Techniques",
+                                "lecture_duration": "2h",
+                                "lecture_files": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            "tags": [
+                "Digital Marketing",
+                "Online Advertising"
+            ],
+            "duration": "5h",
+            "rating": 4.7,
+            "prerequisite": "None",
+            "price": 59.99,
+            "status": "accepted",
+            "created_at": "2023-10-12T11:10:00Z"
+        }
+    ]
+}
