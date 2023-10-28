@@ -16,6 +16,8 @@ import { Login } from "./pages/Login"
 import { Home } from "./pages/Home"
 //course single page
 import { CourseSingle } from "./pages/CourseSingle"
+//import student dashboard
+import { StudentDashboard } from "./pages/dashboard/student"
 
 
 //library css
@@ -59,7 +61,7 @@ function App() {
         <Route exact path="/signup" element={<Signup />} />
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/course" element={<CourseSingle />} />
-        
+        <Route exact path="/dashboard/student" element={<StudentDashboard />} />
       </Routes>
 
     </ Router>

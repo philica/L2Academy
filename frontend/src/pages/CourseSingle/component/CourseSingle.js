@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../../../components/Navbar'
 import CourseDescription from './CourseDescription'
 import CourseDetail from './CourseDetail'
+import Footer from '../../../components/Footer'
 
 const CourseSingle = () => {
     return (
@@ -10,6 +11,7 @@ const CourseSingle = () => {
             <main>
                 <CourseDescription />
                 <CourseDetail />
+                <Footer />
             </main>
         </>
     )
