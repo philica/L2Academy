@@ -31,7 +31,7 @@ const PersonalInfo = () => {
                                     </div>
                                     <div className="lh-1">
                                         <h2 className="mb-0">
-                                            Stella Flores{' '}
+                                            Deborah Getachew{' '}
                                             <Link
                                                 href="#"
                                                 className=""
@@ -47,7 +47,7 @@ const PersonalInfo = () => {
                                                 </svg>
                                             </Link>
                                         </h2>
-                                        <p className="mb-0 d-block">@stellaflores</p>
+                                        <p className="mb-0 d-block">@deborahgetachew</p>
                                     </div>
                                 </div>
                                 <div>

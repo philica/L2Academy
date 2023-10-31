@@ -18,7 +18,12 @@ import { Home } from "./pages/Home"
 import { CourseSingle } from "./pages/CourseSingle"
 //import student dashboard
 import { StudentDashboard } from "./pages/dashboard/student"
-
+// import profile page
+import { Profile } from "./pages/Profile"
+import ProfileEdit from './pages/Profile/component/ProfileEdit';
+import ProfileSecurity from './pages/Profile/component/ProfileSecurity';
+import ProfileSocial from './pages/Profile/component/ProfileSocial';
+import ProfileDelete from './pages/Profile/component/ProfileDelete';  
 
 //library css
 import './assets/fonts/feather/feather.css';
@@ -62,6 +67,12 @@ function App() {
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/course" element={<CourseSingle />} />
         <Route exact path="/dashboard/student" element={<StudentDashboard />} />
+        <Route exact path="/profile" element={<Profile />} >
+          <Route exact path="edit" element={<ProfileEdit />} />
+          <Route exact path="security" element={<ProfileSecurity />} />
+          <Route exact path="social" element={<ProfileSocial />} />
+          <Route exact path="delete" element={<ProfileDelete />} />
+        </Route>
       </Routes>
 
     </ Router>
