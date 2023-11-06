@@ -6,78 +6,78 @@ const Schema = mongoose.Schema
 
 //user schema
 const userSchema = new mongoose.Schema({
-    first_name: {
-      type: String,
-      required: false,
-      trim: true
-    },
-    last_name: {
-      type: String,
-      required: false,
-      trim: true
-    },
-    user_name: {
-      type: String,
-      required: false,
-      trim: true
-    },
-    email: {
-      type: String,
-      required: true,
-      unique: true,
-      trim: true,
-      lowercase: true
-    },
-    password: {
-      type: String,
-      required: true,
-      trim: true
-    },
-    role: {
-      type: String,
-      required: false
-    },
-    profile_picture: {
-      type: String
-    },
-    contact_info: {
-      type: Number,
-      trim: true
-    },
-    social_profiles: {
-      type: Object
-    },
-    preferences: {
-      type: Object
-    },
-    created_at: {
-      type: Date,
-      default: Date.now
-    },
-    is_deleted: {
-      type: Boolean,
-      default: false
-    }
-  });
+  first_name: {
+    type: String,
+    required: true
+  },
+  last_name: {
+    type: String,
+    required: true
+  },
+  user_name: {
+    type: String,
+    required: true,
+    unique: true
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true
+  },
+  password: {
+    type: String,
+    required: true
+  },
+  role: {
+    type: String,
+    enum: ['student', 'instructor', 'administrator'],
+    required: true
+  },
+  profile_picture: {
+    type: String
+  },
+  phone_number: {
+    type: String
+  },
+  social_profiles: {
+    type: [
+      {
+        platform: {
+          type: String,
+          required: true
+        },
+        url: {
+          type: String,
+          required: true
+        }
+      }
+    ]
+  },
+  is_deleted: {
+    type: Boolean,
+    default: false
+  }
+}, {timestamps: true});
 
 
 
 //create static signup method
-userSchema.statics.signup = async function (email,password) {
-
+userSchema.statics.signup = async function (user) {
+  console.log(user)
   //check if both the fields are filled 
-  if(!email || !password) {
+  if(!user.email || !user.password) {
     throw Error('All fields must be filled')
   }
 
-  if(!validator.isEmail(email)) {
+  if(!validator.isEmail(user.email)) {
     throw Error("Email is not valid")
   }
   
-  if (!validator.isStrongPassword(password)) {
+  if (!validator.isStrongPassword(user.password)) {
     throw Error("Password is not strong enough")
   }
 
+  const email = user.email
   const exists = await this.findOne({email})
 
   if(exists){
@@ -85,12 +85,12 @@ userSchema.statics.signup = async function (email,password) {
   }
 
   const salt = await bcrypt.genSalt(10)
-  const hash = await bcrypt.hash(password, salt)
-
+  const hash = await bcrypt.hash(user.password, salt)
+  user.password = hash
   //create a document
-  const user = await this.create({email, password: hash})
-  console.log(user)
-  return user 
+  const User = await this.create(user)
+  console.log(User)
+  return User 
 }
 
 

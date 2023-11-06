@@ -1,9 +1,48 @@
-import React from 'react'
-
+import React, { useEffect, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
+import Flatpickr from 'flatpickr';
+import 'flatpickr/dist/flatpickr.min.css';
 
 import avatar from '../../../assets/images/avatar/avatar-3.jpg'
 
 const ProfileEdit = () => {
+
+    const [userData, setUserData] = useState({ state: '', dateValue: '' })
+
+
+    const flatpickrRef = useRef(null);
+
+    useEffect(() => {
+        console.log("flapicker initialized")
+        if (flatpickrRef.current) {
+            Flatpickr(flatpickrRef.current);
+        }
+    }, []);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log("form submitted")
+        console.log(userData)
+    }
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        console.log(name, value)
+        setUserData({
+            ...userData,
+            [name]: value,
+        });
+    }
+
+    const handleDateChange = (e) => {
+        const selectedDate = e.target.value; // Extract the selected date from the input's value
+        console.log(selectedDate)
+        setUserData({
+            ...userData,
+            dateValue: selectedDate,
+        });
+    }
+
     return (
         <div className="col-lg-9 col-md-8 col-12">
             {/* Card */}
@@ -29,12 +68,12 @@ const ProfileEdit = () => {
                             </div>
                         </div>
                         <div>
-                            <a href="#" className="btn btn-outline-secondary btn-sm m-2">
+                            <Link href="#" className="btn btn-outline-secondary btn-sm m-2">
                                 Update
-                            </a>
-                            <a href="#" className="btn btn-outline-danger btn-sm">
+                            </Link>
+                            <Link href="#" className="btn btn-outline-danger btn-sm">
                                 Delete
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     <hr className="my-5" />
@@ -42,13 +81,13 @@ const ProfileEdit = () => {
                         <h4 className="mb-0">Personal Details</h4>
                         <p className="mb-4">Edit your personal information and address.</p>
                         {/* Form */}
-                        <form className="row gx-3 needs-validation" noValidate>
+                        <form className="row gx-3 needs-validation" onSubmit={handleSubmit} noValidate>
                             {/* First name */}
                             <div className="mb-3 col-12 col-md-6">
                                 <label className="form-label" htmlFor="fname">
                                     First Name
                                 </label>
-                                <input type="text" id="fname" className="form-control" placeholder="First Name" required />
+                                <input type="text" name="first_name" id="fname" className="form-control" placeholder="First Name" defaultValue={"Philica"} required onChange={handleInputChange} />
                                 <div className="invalid-feedback">Please enter first name.</div>
                             </div>
                             {/* Last name */}
@@ -56,7 +95,7 @@ const ProfileEdit = () => {
                                 <label className="form-label" htmlFor="lname">
                                     Last Name
                                 </label>
-                                <input type="text" id="lname" className="form-control" placeholder="Last Name" required />
+                                <input type="text" name="last_name" id="lname" className="form-control" placeholder="Last Name" required onChange={handleInputChange} />
                                 <div className="invalid-feedback">Please enter last name.</div>
                             </div>
                             {/* Phone */}
@@ -64,7 +103,7 @@ const ProfileEdit = () => {
                                 <label className="form-label" htmlFor="phone">
                                     Phone
                                 </label>
-                                <input type="text" id="phone" className="form-control" placeholder="Phone" required />
+                                <input type="text" name="phone_number" id="phone" className="form-control" placeholder="Phone" required onChange={handleInputChange} />
                                 <div className="invalid-feedback">Please enter phone number.</div>
                             </div>
                             {/* Birthday */}
@@ -73,41 +112,27 @@ const ProfileEdit = () => {
                                     Birthday
                                 </label>
                                 <input
-                                    className="form-control flatpickr flatpickr-input"
+                                    className="form-control "
                                     type="text"
                                     placeholder="Birth of Date"
                                     id="birth"
-                                    name="birth"
-                                    readOnly
+                                    name="dateValue"
+                                    ref={flatpickrRef}
+                                    value={userData.dateValue}
+                                    onChange={handleDateChange}
                                 />
                                 <div className="invalid-feedback">Please choose a date.</div>
-                            </div>
-                            {/* Address */}
-                            <div className="mb-3 col-12 col-md-6">
-                                <label className="form-label" htmlFor="address">
-                                    Address Line 1
-                                </label>
-                                <input type="text" id="address" className="form-control" placeholder="Address" required />
-                                <div className="invalid-feedback">Please enter address.</div>
-                            </div>
-                            {/* Address */}
-                            <div className="mb-3 col-12 col-md-6">
-                                <label className="form-label" htmlFor="address2">
-                                    Address Line 2
-                                </label>
-                                <input type="text" id="address2" className="form-control" placeholder="Address" required />
-                                <div className="invalid-feedback">Please enter address.</div>
                             </div>
                             {/* State */}
                             <div className="mb-3 col-12 col-md-6">
                                 <label className="form-label" htmlFor="editState">
                                     State
                                 </label>
-                                <select className="form-select" id="editState" required>
+                                <select name="state" className="form-select" id="editState" required onChange={handleInputChange}>
                                     <option value="">Select State</option>
-                                    <option value="1">Gujarat</option>
-                                    <option value="2">Rajasthan</option>
-                                    <option value="3">Maharashtra</option>
+                                    <option value="Gujarat">Gujarat</option>
+                                    <option value="Rajasthan">Rajasthan</option>
+                                    <option value="Maharashtra">Maharashtra</option>
                                 </select>
                                 <div className="invalid-feedback">Please choose state.</div>
                             </div>
@@ -116,7 +141,7 @@ const ProfileEdit = () => {
                                 <label className="form-label" htmlFor="editCountry">
                                     Country
                                 </label>
-                                <select className="form-select" id="editCountry" required>
+                                <select name="country" className="form-select" id="editCountry" required onChange={handleInputChange}>
                                     <option value="">Select Country</option>
                                     <option value="1">India</option>
                                     <option value="2">UK</option>
