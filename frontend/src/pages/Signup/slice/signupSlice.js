@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
-import { useNavigate } from 'react-router-dom'
 
 
 const initialState = {
@@ -8,15 +7,15 @@ const initialState = {
   error: ""
 }
 
-export const signupUser = createAsyncThunk('signup/signupUser', async ({ email, password }) => {
-  console.log(email, password)
+export const signupUser = createAsyncThunk('signup/signupUser', async (userData) => {
+  console.log(userData.email, userData.password)
   try {
     const response = await fetch('/api/user/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify(userData),
     });
     if (!response.ok) {
       // console.log(response.json())
@@ -25,11 +24,11 @@ export const signupUser = createAsyncThunk('signup/signupUser', async ({ email, 
     }
     const data = await response.json();
     if (response.ok) {
-      localStorage.setItem('user', JSON.stringify(data))
+      localStorage.setItem('user', JSON.stringify({ email: data.email, token: data.token }))
       console.log('user signed up successfully')
     }
     console.log(data)
-    return(data)
+    return (data)
   } catch (error) {
     throw new Error(error.message);
   }

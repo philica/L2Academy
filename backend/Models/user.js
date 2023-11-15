@@ -8,16 +8,16 @@ const Schema = mongoose.Schema
 const userSchema = new mongoose.Schema({
   first_name: {
     type: String,
-    required: true
+    // required: true
   },
   last_name: {
     type: String,
-    required: true
+    // required: true
   },
   user_name: {
     type: String,
-    required: true,
-    unique: true
+    // required: true,
+    // unique: true
   },
   email: {
     type: String,
@@ -31,7 +31,7 @@ const userSchema = new mongoose.Schema({
   role: {
     type: String,
     enum: ['student', 'instructor', 'administrator'],
-    required: true
+    // required: true
   },
   profile_picture: {
     type: String
@@ -44,11 +44,11 @@ const userSchema = new mongoose.Schema({
       {
         platform: {
           type: String,
-          required: true
+          
         },
         url: {
           type: String,
-          required: true
+          
         }
       }
     ]

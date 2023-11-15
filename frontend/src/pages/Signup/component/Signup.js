@@ -18,9 +18,9 @@ import logo from '../../../assets/images/brand/logo/L2Logo.png'
 const Signup = () => {
     const signedUp = useSelector(state => state.signup);
     const navigate = useNavigate();
-    const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
-    const [phoneNumber, setPhoneNumber] = useState('');
+    const [first_name, setfirst_name] = useState('');
+    const [last_name, setlast_name] = useState('');
+    const [phone_number, setphone_number] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [acceptTerms, setAcceptTerms] = useState(false);
@@ -28,8 +28,9 @@ const Signup = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        const userData = {first_name,last_name, email, password, phone_number}
         try {
-            const resultAction = await dispatch(signupUser({ email, password }));
+            const resultAction = await dispatch(signupUser(userData));
             if (signupUser.fulfilled.match(resultAction)) {
               navigate('/'); // Redirect to the home page
             } else {
@@ -38,8 +39,8 @@ const Signup = () => {
           } catch (error) {
             console.log('Error signing up:', error.message);
           }
-        setFirstName('')
-        setLastName('')
+        setfirst_name('')
+        setlast_name('')
         setEmail('')
         setPassword('')
         setAcceptTerms(false)
@@ -69,42 +70,42 @@ const Signup = () => {
                                 <form onSubmit={handleSubmit} className='row' >
                                     {/* First Name */}
                                     <div className="mb-3 col-12 col-md-6">
-                                        <label htmlFor="firstname" className="form-label">First Name</label>
+                                        <label htmlFor="first_name" className="form-label">First Name</label>
                                         <input
-                                            type="text" id="firstname"
+                                            type="text" id="first_name"
                                             className="form-control"
-                                            name="firstname"
+                                            name="first_name"
                                             placeholder="First Name"
-                                            value={firstName}
-                                            onChange={(e) => setFirstName(e.target.value)}
+                                            value={first_name}
+                                            onChange={(e) => setfirst_name(e.target.value)}
                                             required />
                                     </div>
 
                                     {/* Last Name */}
                                     <div className="mb-3 col-12 col-md-6">
-                                        <label htmlFor="lastname" className="form-label">Last Name</label>
+                                        <label htmlFor="last_name" className="form-label">Last Name</label>
                                         <input
                                             type="text"
-                                            id="lastname"
+                                            id="last_name"
                                             className="form-control"
-                                            name="lastname"
+                                            name="last_name"
                                             placeholder="Last Name"
-                                            value={lastName}
-                                            onChange={(e) => setLastName(e.target.value)}
+                                            value={last_name}
+                                            onChange={(e) => setlast_name(e.target.value)}
                                             required />
                                     </div>
 
                                     {/* phone number */}
                                     <div className="mb-3 col-12 col-md-12">
-                                        <label htmlFor="phonenumber" className="form-label">Phone Number</label>
+                                        <label htmlFor="phone_number" className="form-label">Phone Number</label>
                                         <input
                                             type="text"
-                                            id="phonenumber"
+                                            id="phone_number"
                                             className="form-control"
-                                            name="phonenumber"
+                                            name="phone_number"
                                             placeholder="Phone Number"
-                                            value={phoneNumber}
-                                            onChange={(e) => setPhoneNumber(e.target.value)}
+                                            value={phone_number}
+                                            onChange={(e) => setphone_number(e.target.value)}
                                             required />
                                     </div>
 

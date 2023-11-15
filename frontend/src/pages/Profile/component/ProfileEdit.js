@@ -2,11 +2,14 @@ import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
+import { useSelector } from "react-redux";
 
 import avatar from '../../../assets/images/avatar/avatar-3.jpg'
 
 const ProfileEdit = () => {
 
+    const user = useSelector((state) => state.login.user);
+    console.log(user)
     const [userData, setUserData] = useState({ state: '', dateValue: '' })
 
 
@@ -17,6 +20,14 @@ const ProfileEdit = () => {
         if (flatpickrRef.current) {
             Flatpickr(flatpickrRef.current);
         }
+
+        //fetch and set user data from api to state
+        if(user){
+            console.log("user data fetched")
+        }else{
+            console.log("user data not fetched")
+        }
+        
     }, []);
 
     const handleSubmit = (e) => {
